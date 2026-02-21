@@ -12,13 +12,13 @@ const Login = () => {
            const [username,Setusername] = useState('');
            const [password,Setpassword] = useState('');
        
-        const {handleLogin,loading} = useAuth();
+        const {user,handleLogin,loading} = useAuth();
         const navigate = useNavigate();
 
         const handleSubmit = (e)=>{
          e.preventDefault();
                handleLogin(username,password).then((res)=>{
-                  console.log(res);
+                  console.log(user);
                   navigate("/")
                   
                })
