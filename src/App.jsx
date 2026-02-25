@@ -1,17 +1,17 @@
-import React from 'react'
-import AppRoutes from './Approutes'
-import "./style.scss"
-import { AuthProvider } from './features/auth/auth.context'
+import React from "react";
+import AppRoutes from "./Approutes";
+import "./style.scss";
+import { AuthProvider } from "./features/auth/auth.context";
+import { PostProvider } from "./features/post/Post.Context";
 
 const App = () => {
   return (
- <AuthProvider>
+    <AuthProvider>
+      <PostProvider>
+        <AppRoutes></AppRoutes>
+      </PostProvider>
+    </AuthProvider>
+  );
+};
 
-
- <AppRoutes></AppRoutes>
- </AuthProvider>
-
-  )
-}
-
-export default App
+export default App;

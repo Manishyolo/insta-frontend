@@ -3,6 +3,7 @@ import React from "react";
 import "../style/form.scss";
 import { Link } from "react-router";
 import { useState } from "react";
+import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router";
 
 const Register = () => {
@@ -17,7 +18,7 @@ const Register = () => {
          e.preventDefault();
                handleRegister(username,email,password).then((res)=>{
                   console.log(res);
-                  navigate("/")
+                  navigate("/feed")
                   
                })
         }

@@ -19,7 +19,7 @@ const Login = () => {
          e.preventDefault();
                handleLogin(username,password).then((res)=>{
                   console.log(user);
-                  navigate("/")
+                  navigate("/feed")
                   
                })
         }
